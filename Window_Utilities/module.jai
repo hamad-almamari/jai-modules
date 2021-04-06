@@ -23,7 +23,7 @@ Window_Flags :: enum_flags u32 {
     H_SCROLLABLE    :: 1 << 6;
     // state
     MINIMIZED       :: 1 << 10;
-    MAXMIZED        :: 1 << 11;
+    MAXIMIZED       :: 1 << 11;
     FULLSCREEN      :: 1 << 12;   
 }
 

@@ -21,7 +21,7 @@ main :: () {
 
     log("---------[START]----------");
     log("use the following keys:");
-    log("M - to maxmize");
+    log("M - to maximize");
     log("N - to minimize (Note you can not restore when your window minmized due to loos of input data)");
     log("R - to restore");
     log("F - to fullscreen_on");
@@ -43,8 +43,8 @@ main :: () {
                 if it.key_pressed == 0 continue;
 
                 if it.key_code == xx #char "M" {
-                    success := WU.window_maxmize(nwh);
-                    if success log("[maxmized] FLAGS: %", WU.get_window_flags(nwh));
+                    success := WU.window_maximize(nwh);
+                    if success log("[maximized] FLAGS: %", WU.get_window_flags(nwh));
 
                 } else if it.key_code == xx #char "N" {
                     success := WU.window_minimize(nwh);
