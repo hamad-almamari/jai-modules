@@ -10,10 +10,6 @@ main :: () {
     nwh   := WC.create_window(700, 350, "Hello Sailor!!");
     quit := false;
 
-    child_nwh   := WC.create_window(300, 150, "Child!!", parent=nwh);
-    child_nwh2  := WC.create_window(200, 150, "Child 2!!", parent=nwh);
-    log("main: % , child: %", nwh, child_nwh);
-
     flags                       := WU.get_window_flags(nwh);
     width, height               := WU.get_window_size(nwh);
     border_width, border_height := WU.get_window_size(nwh, true);
