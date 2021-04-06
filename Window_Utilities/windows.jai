@@ -52,7 +52,7 @@ get_window_flags :: (nwh: HWND) -> Window_Flags
     if style & WS_HSCROLL     then result |= .H_SCROLLABLE;
     // state
     if style & WS_MINIMIZE    then result |= .MINIMIZED;
-    if style & WS_MAXIMIZE    then result |= .MAXMIZED;
+    if style & WS_MAXIMIZE    then result |= .MAXIMIZED;
     // fullscreen
     m_width, m_height := get_window_display_size(nwh);
     w_rect_width, w_rect_height := get_window_size(nwh, true);
@@ -117,7 +117,7 @@ window_fullscreen_off :: (nwh: HWND, backup: *Window_Fullscreen_Backup) -> bool
     return true;
 }
 
-window_maxmize :: (nwh: HWND) -> bool {
+window_maximize :: (nwh: HWND) -> bool {
     assert(nwh != null);
     flags := get_window_flags(nwh);
     if flags & .FULLSCREEN return false;
