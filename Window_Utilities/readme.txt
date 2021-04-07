@@ -1,16 +1,16 @@
-// This is simple Window Utilities module, it work perfecly with default Window_Creation and Input modules.
-// The idea is to provide simple Utilities module (platform independent) to work with diffrent modules.
-// and to be imported from diffrent modules like graphics or what ever when any one want information about
-// the window.
-//
-// This module does not provide Window Creation, and does not depends on input module (or Window Proc).
-// The user may use any of window creation modules or even his own, all what this module
-// needs is the Native Window Handle (nwh) (for example: HWND in Windows)
-// you can use "Window_Type" default module or what ever you want.
-//
-// for now this module only supports Windows.
-//
-// Hamad Almamari, 04-06-2021
+This is simple Window Utilities module, it work perfecly with default Window_Creation and Input modules.
+The idea is to provide simple Utilities module (platform independent) to work with diffrent modules.
+and to be imported from diffrent modules like graphics or what ever when any one want information about
+the window.
+
+This module does not provide Window Creation, and does not depends on input module (or Window Proc).
+The user may use any of window creation modules or even his own, all what this module
+needs is the Native Window Handle (nwh) (for example: HWND in Windows)
+you can use "Window_Type" default module or what ever you want.
+
+for now this module only supports Windows.
+
+ Hamad Almamari, 04-06-2021
 
 Api:
 Window_Flags :: enum_flags u32 {
@@ -35,7 +35,7 @@ get_window_flags        :: (nwh: Window_Type) -> Window_Flags
 get_window_display_size :: (nwh: Window_Type) -> (width: u32, height: u32)
 window_fullscreen_on    :: (nwh: Window_Type) -> Window_Fullscreen_Backup, bool
 window_fullscreen_off   :: (nwh: Window_Type, backup: *Window_Fullscreen_Backup) -> bool
-window_maxmize          :: (nwh: Window_Type) -> bool
+window_maximize          :: (nwh: Window_Type) -> bool
 window_minimize         :: (nwh: Window_Type) -> bool
 window_restore          :: (nwh: Window_Type) -> bool
 window_close            :: (nwh: Window_Type)
